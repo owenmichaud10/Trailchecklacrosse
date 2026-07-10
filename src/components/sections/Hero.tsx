@@ -1,24 +1,11 @@
 import Image from "next/image";
-import { getHeroSrc, getLogoSrc } from "@/lib/site-assets";
+import { getLogoSrc } from "@/lib/site-assets";
 
 export default function Hero() {
   const logoSrc = getLogoSrc();
-  const heroSrc = getHeroSrc();
 
   return (
-    <section className="relative min-h-[32rem] overflow-hidden bg-navy lg:min-h-[36rem]">
-      {heroSrc ? (
-        <Image
-          src={heroSrc}
-          alt=""
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-          aria-hidden="true"
-        />
-      ) : null}
-      <div className="absolute inset-0 bg-navy/75" aria-hidden="true" />
+    <section className="relative min-h-[32rem] overflow-hidden bg-gradient-to-b from-navy via-navy-light to-navy lg:min-h-[36rem]">
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 py-20 text-center sm:py-24 lg:py-28">
         <h1 className="hero-animate text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
